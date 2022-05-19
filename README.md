@@ -1,1 +1,1 @@
-The file *comet_matplotlib.py* contains two functions replicating the built-in MATLAB function comet and comet3, in which two and three-dimensional trajectories are represented along time, respectively.
+The file *comet_matplotlib.py* contains two functions replicating the built-in MATLAB functions comet and comet3, in which two and three-dimensional trajectories are represented along time, respectively. The trajectory that the particle leaves behind and the particle istelf at the current time step are visualized through an animation.
