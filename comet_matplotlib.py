@@ -1,10 +1,11 @@
+import numpy as np
+
 def comet(x,y, step = 1,time=0.01):
     """
 
     Displays a 2D comet plot: 2D trajectory along time.
 
     """
-    import numpy as np
     import matplotlib.pyplot as plt
 
     x, y = np.asarray(x[::step]), np.asarray(y[::step])
@@ -24,13 +25,11 @@ def comet3(x,y,z, step=1, ani_interval = 10, lims = [[0,0],[0,0],[0,0]]):
     Displays a 3D comet plot: 3D trajectory along time.
 
     """
-    import numpy as np
     import matplotlib.pyplot as plt
     from mpl_toolkits import mplot3d
     from mpl_toolkits.mplot3d import Axes3D
     from matplotlib import animation
 
-    # Plotting mesh
     fig = plt.figure()
     ax = fig.gca(projection='3d')
 
@@ -51,7 +50,6 @@ def comet3(x,y,z, step=1, ani_interval = 10, lims = [[0,0],[0,0],[0,0]]):
         point.set_data(data[:2, i])
         point.set_3d_properties(data[2, i])
 
-    # Setting the axes properties
     lims = np.array(lims)
     xmin, xmax = lims[0,:]
     ymin, ymax = lims[1,:]
@@ -97,9 +95,9 @@ def comet3(x,y,z, step=1, ani_interval = 10, lims = [[0,0],[0,0],[0,0]]):
  
 # comet(x,y)
 
-# t = np.arange(0, 4*np.pi, np.pi/50)
-# x = -np.sin(t)**2 + np.sin(t/2)
-# y =  np.cos(t)**3 + np.cos(t/2)**2
-# z =  np.cos(t)    + np.cos(t/2)
+t =  np.arange(0, 4*np.pi, np.pi/50)
+x = -np.sin(t)**2 + np.sin(t/2)
+y =  np.cos(t)**3 + np.cos(t/2)**2
+z =  np.cos(t)    + np.cos(t/2)
 
-# comet3(x,y,z)
+comet3(x,y,z)
